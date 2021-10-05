@@ -18,6 +18,7 @@ public class MazeGenerator : MonoBehaviour
     public Transform pfFloor;
     public Transform pfStart;
     public Transform pfFinish;
+    public Transform pfPlayer;
 
     private Maze _maze;
     Vector3 gtstart;
@@ -50,6 +51,9 @@ public class MazeGenerator : MonoBehaviour
                 pfStart.localScale = data.Scale * scale * 0.5f;
                 Instantiate(pfStart, data.Position * scale, Quaternion.identity, transform);
                 gtstart = data.Position * scale;
+                pfPlayer.localScale = data.Scale * scale * 0.75f;
+                pfPlayer.GetComponent<PlayerController>().MoveSpeed = 5f * scale;
+                Instantiate(pfPlayer, data.Position * scale, Quaternion.identity);
 
             }
             if (data.Type == EnumCellType.Exit)

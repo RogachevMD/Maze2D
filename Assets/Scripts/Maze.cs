@@ -201,11 +201,16 @@ public class Maze
 
                 if (lineEnded && size > 0)
                 {
-                    tmp.Add(new RenderData(new Vector3((sPos + ePos) / 2, y, 0), new Vector3(size, 1, 1), size, EnumCellType.Wall));
+                    if (size > 1)
+                    {
+                        tmp.Add(new RenderData(new Vector3((sPos + ePos) / 2, y, 0), new Vector3(size, 1, 1), size, EnumCellType.Wall));
+                    }
+
                     size = 0;
                 }
             }
         }
+        //size = 0;
         for (int x = 0; x < _widthX; x++)
         {
             for (int y = 0; y < _heightY; y++)
@@ -240,14 +245,6 @@ public class Maze
         }
 
         List<RenderData> data = new List<RenderData>();
-
-        //foreach (RenderData line in tmp)
-        //{
-        //    if (line.Size > 1)
-        //    {
-        //        data.Add(line);
-        //    }
-        //}
 
         double random1X = UnityEngine.Random.Range(0, _widthX / 2) * 2 + 1;
         double random1Y = UnityEngine.Random.Range(0, _heightY / 2) * 2 + 1;
