@@ -9,5 +9,8 @@ public class StartMenu : MonoBehaviour
     {
         SceneManager.LoadScene("SliderScene");
     }
-    
+    public void Exit()
+    {
+        Application.Quit();
+    }
 }

@@ -42,3 +42,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Wall
+    uniqueID: 3813009229
+    locked: 0
+  - name: Floor
+    uniqueID: 4002342369
+    locked: 0
+  - name: Goal
+    uniqueID: 315200175
+    locked: 0
+  - name: Player
+    uniqueID: 3738342619
+    locked: 0
