@@ -26,7 +26,14 @@ public class MazeGenerator : MonoBehaviour
 
     void Start()
     {
-        _maze = new Maze(widthX, heightY, jumpLenght);
+        if (Settings.SizeX < 11 || Settings.SizeY < 11)
+        {
+            _maze = new Maze(widthX, heightY, jumpLenght);
+        }
+        else
+        {
+            _maze = new Maze(Settings.SizeX, Settings.SizeY, jumpLenght);
+        }
         _maze.Init();
         ShowMaze(_maze);
     }

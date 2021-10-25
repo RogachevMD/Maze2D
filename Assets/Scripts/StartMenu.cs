@@ -7,7 +7,7 @@ public class StartMenu : MonoBehaviour
 {
     public void StartNewGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene("SliderScene");
     }
     
 }

@@ -249,8 +249,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4183c957f3964304dacd892a75cbcf0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  widthX: 52
-  heightY: 52
+  widthX: 51
+  heightY: 51
   scale: 1
   pfWall: {fileID: 665285181389615186, guid: 5299de030d3f636478c9e46746da2976, type: 3}
   pfFloor: {fileID: 524974132693690417, guid: 45e5145ef786b8f498beb0b80b3f9d7c, type: 3}
