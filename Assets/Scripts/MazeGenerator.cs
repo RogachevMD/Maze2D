@@ -74,9 +74,9 @@ public class MazeGenerator : MonoBehaviour
             }
         }
     }
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.blue;
-        Gizmos.DrawWireSphere(gtstart, ((widthX + heightY) / 4) * scale);
-    }
+    //private void OnDrawGizmos()
+    //{
+    //    Gizmos.color = Color.blue;
+    //    Gizmos.DrawWireSphere(gtstart, ((widthX + heightY) / 4) * scale);
+    //}
 }

@@ -208,6 +208,12 @@ public class Maze
 
                     size = 0;
                 }
+
+                if(_mazeMap[x, y].Type == EnumCellType.Floor)
+                {
+                    tmp.Add(new RenderData(new Vector3(x, y, 0), new Vector3(1, 1, 1), 1, EnumCellType.Floor));
+                }
+                        
             }
         }
         //size = 0;
