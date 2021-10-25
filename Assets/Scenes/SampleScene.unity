@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420030}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -149,6 +150,19 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
+--- !u!114 &519420030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a5faafb608914c409f73f25183058cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _player: {fileID: 0}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -176,7 +190,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -235,14 +249,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4183c957f3964304dacd892a75cbcf0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  widthX: 51
-  heightY: 51
+  widthX: 52
+  heightY: 52
   scale: 1
   pfWall: {fileID: 665285181389615186, guid: 5299de030d3f636478c9e46746da2976, type: 3}
   pfFloor: {fileID: 524974132693690417, guid: 45e5145ef786b8f498beb0b80b3f9d7c, type: 3}
   pfStart: {fileID: 6790207496671799864, guid: 22a18523d95a89242bbb731f8be74606, type: 3}
   pfFinish: {fileID: 6504996134213655477, guid: 1dddc64f8f9a208408e76d205774fc3f, type: 3}
   pfPlayer: {fileID: 1898080137515239949, guid: 10527bc744b904a4ba11e0f35064fa1a, type: 3}
+  Camera: {fileID: 519420032}
 --- !u!4 &653211164
 Transform:
   m_ObjectHideFlags: 0

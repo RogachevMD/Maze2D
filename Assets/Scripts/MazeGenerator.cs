@@ -19,13 +19,14 @@ public class MazeGenerator : MonoBehaviour
     public Transform pfStart;
     public Transform pfFinish;
     public Transform pfPlayer;
+    public Transform Camera;
 
     private Maze _maze;
     Vector3 gtstart;
 
     void Start()
     {
-        _maze = new Maze(widthX, heightY, 2);
+        _maze = new Maze(widthX, heightY, jumpLenght);
         _maze.Init();
         ShowMaze(_maze);
     }
@@ -53,7 +54,10 @@ public class MazeGenerator : MonoBehaviour
                 gtstart = data.Position * scale;
                 pfPlayer.localScale = data.Scale * scale * 0.75f;
                 pfPlayer.GetComponent<PlayerController>().MoveSpeed = 5f * scale;
-                Instantiate(pfPlayer, data.Position * scale, Quaternion.identity);
+                Transform player = Instantiate(pfPlayer, data.Position * scale, Quaternion.identity);
+                Camera.SetParent(player);
+                Camera.position = new Vector3(player.position.x, player.position.y, -10f);
+                //Instantiate(player);
 
             }
             if (data.Type == EnumCellType.Exit)

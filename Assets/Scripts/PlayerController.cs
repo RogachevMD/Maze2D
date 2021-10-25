@@ -7,8 +7,10 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D _rb2;
     private CircleCollider2D _collider2D;
     public float MoveSpeed;
+    public Camera Camera;
     private float _moveX;
     private float _moveY;
+    
 
     void Start()
     {
