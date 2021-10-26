@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
-
+using System.IO;
 
 public class MazeGenerator : MonoBehaviour
 {
@@ -37,8 +37,6 @@ public class MazeGenerator : MonoBehaviour
         _maze.Init();
         ShowMaze(_maze);
     }
-
-
 
     private void ShowMaze(Maze maze)
     {

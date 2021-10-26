@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 
+[System.Serializable]
 public class RenderData
 {
     public RenderData(Vector3 position, Vector3 scale, int size, EnumCellType type)
