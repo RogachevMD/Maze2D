@@ -10,7 +10,8 @@ public class PlayerController : MonoBehaviour
     public Camera Camera;
     private float _moveX;
     private float _moveY;
-    
+    public bool OnPause = false;
+
 
     void Start()
     {
@@ -21,13 +22,25 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        _moveX = Input.GetAxisRaw("Horizontal");
-        _moveY = Input.GetAxisRaw("Vertical");
+        if (!OnPause)
+        {
+            _moveY = Input.GetAxisRaw("Vertical");
+            _moveX = Input.GetAxisRaw("Horizontal");
+
+        }
     }
 
     private void FixedUpdate()
     {
-        Vector3 moveDir = new Vector3(_moveX, _moveY, 0).normalized;
-        _rb2.velocity = moveDir*MoveSpeed;
+        Vector3 moveDir;
+        if (!OnPause)
+        {
+            moveDir = new Vector3(_moveX, _moveY, 0).normalized;
+        }
+        else
+        {
+            moveDir = Vector3.zero;
+        }
+        _rb2.velocity = moveDir * MoveSpeed;
     }
 }
