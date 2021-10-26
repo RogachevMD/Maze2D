@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6504996134213655477}
   - component: {fileID: 3224205354229271762}
   - component: {fileID: 868220157756767781}
+  - component: {fileID: 6692172310147009715}
   m_Layer: 0
   m_Name: pfExit
   m_TagString: Untagged
@@ -70,7 +71,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 315200175
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
   m_Color: {r: 0.161707, g: 0.7169812, b: 0.13866144, a: 1}
@@ -99,3 +100,15 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &6692172310147009715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7513171295268822022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1911231ca4a5fb24c919c05354a71ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

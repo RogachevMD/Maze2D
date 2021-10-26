@@ -209,10 +209,10 @@ public class Maze
                     size = 0;
                 }
 
-                if(_mazeMap[x, y].Type == EnumCellType.Floor)
-                {
-                    tmp.Add(new RenderData(new Vector3(x, y, 0), new Vector3(1, 1, 1), 1, EnumCellType.Floor));
-                }
+                //if(_mazeMap[x, y].Type == EnumCellType.Floor)
+                //{
+                //    tmp.Add(new RenderData(new Vector3(x, y, 0), new Vector3(1, 1, 1), 1, EnumCellType.Floor));
+                //}
                         
             }
         }
@@ -255,6 +255,7 @@ public class Maze
         double random1X = UnityEngine.Random.Range(0, _widthX / 2) * 2 + 1;
         double random1Y = UnityEngine.Random.Range(0, _heightY / 2) * 2 + 1;
         tmp.Add(new RenderData(new Vector3((float)random1X, (float)random1Y, 1), new Vector3(1, 1, 1), 1, EnumCellType.Enter));
+        tmp.Add(new RenderData(new Vector3((float)_widthX / 2, _heightY / 2, 1), new Vector3(_widthX, _heightY), 1, EnumCellType.Floor));
 
         bool gotit = false;
         do
